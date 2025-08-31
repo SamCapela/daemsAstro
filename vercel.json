@@ -5,7 +5,7 @@
             "headers": [
                 {
                     "key": "Content-Security-Policy",
-                    "value": "default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; frame-src https://player.twitch.tv https://www.twitch.tv; connect-src 'self' https://api.twitch.tv https://gql.twitch.tv; img-src 'self' https://static-cdn.jtvnw.net data:; font-src 'self';"
+                    "value": "default-src 'self'; script-src 'self' https://player.twitch.tv https://www.twitch.tv https://clips.twitch.tv 'unsafe-eval'; style-src 'self' 'unsafe-inline'; frame-src https://player.twitch.tv https://clips.twitch.tv; connect-src 'self' https://api.twitch.tv https://gql.twitch.tv; img-src 'self' https://static-cdn.jtvnw.net data:; font-src 'self';"
                 }
             ]
         }
