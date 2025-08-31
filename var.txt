@@ -1,3 +1,0 @@
-TWITCH_CLIENT_ID=mwxp4cv6eaeiscu3ir9m1vgs9fbopj
-TWITCH_CLIENT_SECRET=zyqq4ebqx7rwur6uat54l3p7v1rlxp
-TWITCH_REDIRECT_URI=https://daems-astro.vercel.app/auth/callback

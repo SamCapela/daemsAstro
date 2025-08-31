@@ -1,26 +1,15 @@
 ---
 const code = Astro.url.searchParams.get("code");
 ---
-
 <html lang="fr">
   <head>
     <title>Authentification Twitch</title>
   </head>
   <body>
     <div id="auth"></div>
-    <script>
-      async function handleAuth() {
-        const response = await fetch(`/api/auth?code=${encodeURIComponent(code)}`);
-        const data = await response.json();
-
-        if (data.access_token) {
-          localStorage.setItem("twitch_token", data.access_token);
-          window.location.href = "/";
-        } else {
-          alert("Échec de l'authentification");
-        }
-      }
-      handleAuth();
+    <script type="module">
+      import { handleAuth } from "../scripts/handleAuth.js";
+      handleAuth("{{code}}");
     </script>
   </body>
 </html>

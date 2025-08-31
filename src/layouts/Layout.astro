@@ -1,6 +1,6 @@
 ---
 const { title } = Astro.props;
-import "../styles/global.css"; // Assure-toi que ton global.css est bien dans src/styles/
+import "../styles/global.css";
 ---
 
 <!DOCTYPE html>
@@ -9,20 +9,6 @@ import "../styles/global.css"; // Assure-toi que ton global.css est bien dans sr
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
-
-    <!-- CSP pour autoriser Twitch -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-        default-src 'self';
-        script-src 'self' 'unsafe-eval';
-        style-src 'self' 'unsafe-inline';
-        frame-src https://player.twitch.tv https://www.twitch.tv;
-        connect-src 'self' https://api.twitch.tv https://gql.twitch.tv;
-        img-src 'self' https://static-cdn.jtvnw.net data:;
-        font-src 'self';
-      "
-    />
   </head>
   <body>
     <slot />
